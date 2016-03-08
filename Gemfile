@@ -17,7 +17,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+#gem 'jquery-rails'
+#gem 'jquery-rails', '~> 3.1', '>= 3.1.4'
+gem 'jquery-rails', '~> 3.0'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -49,6 +51,6 @@ end
 
 
 gem 'unicorn'
-
-
-
+#gem 'activeadmin', '~> 0.6.5'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
