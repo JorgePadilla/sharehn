@@ -89,7 +89,9 @@
                 <hr>
 
                 <!-- Preview Image -->
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                <!--img class="img-responsive" src="http://placehold.it/900x300" alt=""-->
+           
+                <%=image_tag(@post.url, size: "800x300" , :class => "img-responsive")%>
 
                 <hr>
 

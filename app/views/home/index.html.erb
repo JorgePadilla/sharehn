@@ -70,8 +70,7 @@
                 </h1>
     <% @posts.each do |post| %>
       
-       <h2>
-                 
+                <h2>           
                    <%= link_to post.name, post  %>
                 </h2>
                 <p class="lead">
@@ -79,7 +78,8 @@
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
                 <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                <!--img class="img-responsive" src="http://placehold.it/900x300" alt=""-->
+                <%=image_tag(post.url, size: "800x300" , :class => "img-responsive")%>
                 <hr>
                 <p><%= post.content %></p>
 				<%= link_to post, class:"btn btn-primary" do %>
