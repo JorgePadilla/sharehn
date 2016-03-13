@@ -76,7 +76,8 @@
                 <p class="lead">
                     by <a>Administrator</a>
                 </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
+                <!--p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p-->
+                <p><span class="glyphicon glyphicon-time"></span> Posted on <%= post.created_at %></p>
                 <hr>
                 <!--img class="img-responsive" src="http://placehold.it/900x300" alt=""-->
                 <%=image_tag(post.url, size: "800x300" , :class => "img-responsive")%>
