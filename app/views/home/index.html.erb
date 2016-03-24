@@ -11,6 +11,11 @@
 
     <title>Blog Home - Start Bootstrap Template</title>
 
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/blog-home.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,18 +40,28 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">SHAREHN</a>
+                
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                	<% if user_signed_in? %>
+					  Logged in as <strong><%= current_user.email %></strong>.
                     <li>
-                      
+					  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
                     </li>
                     <li>
-                      
+                       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+					<% else %>
+					  
                     </li>
                     <li>
-                      
+                      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+					  
+					<% end %>
+                    </li>
+                    <li>
+                    	<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
                     </li>
                 </ul>
             </div>
@@ -70,19 +85,18 @@
                 </h1>
     <% @posts.each do |post| %>
       
-                <h2>           
+       <h2>
+                 
                    <%= link_to post.name, post  %>
                 </h2>
                 <p class="lead">
                     by <a>Administrator</a>
                 </p>
-                <!--p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p-->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on <%= post.created_at %></p>
+                	 <p><span class="glyphicon glyphicon-time"></span> Posted on <%= post.created_at %></p>
                 <hr>
-                <!--img class="img-responsive" src="http://placehold.it/900x300" alt=""-->
-                <%=image_tag(post.url, size: "800x300" , :class => "img-responsive")%>
-                <hr>
-                <p><%= post.content %></p>
+                	 <%=image_tag(post.url, size: "800x300" , :class => "img-responsive")%>
+                <hr>         
+                <p><%= simple_format(post.content) %></p>
 				<%= link_to post, class:"btn btn-primary" do %>
 				    Read More
 				    <span class="glyphicon glyphicon-chevron-right">
@@ -167,7 +181,6 @@
 								<script>
 								(adsbygoogle = window.adsbygoogle || []).push({});
 								</script>
-
             </div-->
 
         </div>
@@ -190,10 +203,10 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <!--script src="js/jquery.js"></script-->
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <!--script src="js/bootstrap.min.js"></script-->
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
 

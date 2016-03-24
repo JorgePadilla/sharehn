@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %><!DOCTYPE html>
 <html>
 <head>
   <title>SHAREHN</title>
@@ -8,7 +14,15 @@
   <%= analytics_init if GoogleAnalytics.valid_tracker? %>
 </head>
 <body>
-
+	
+	
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+  
+<% end %><!DOCTYPE html>
 <%= yield %>
 
 </body>

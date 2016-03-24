@@ -78,4 +78,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   GA.tracker = "UA-74952801-1"
+  config.action_mailer.default_url_options = { host: 'localhost', port: 80 }
+    config.secret_key = '3238e30992442ec7b1332a6ed4b7bb9e10db0f0f170de839296cfb40975166f947aacb37cad0f251732a899852c0898ae45a767080f3336bc1af9ccb2e44855e'
+
 end
