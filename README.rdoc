@@ -1,31 +1,10 @@
-== README
+== SHAREHN
 
-ShareHN is a small website made on Ruby on Rails. Its design is base on a blog time.
-
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database
+ShareHN is a small website made on Ruby on Rails. 
 
 Posts
 +name: string
 +title: string
 +content: text
 +url: string
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 

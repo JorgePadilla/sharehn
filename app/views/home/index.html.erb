@@ -39,7 +39,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">SHAREHN</a>
+                <a class="navbar-brand" href="">SHAREHN</a>
                 
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -85,9 +85,8 @@
                 </h1>
     <% @posts.each do |post| %>
       
-       <h2>
-                 
-                   <%= link_to post.name, post  %>
+       <h2>                
+                   <%= link_to post.title, post %>
                 </h2>
                 <p class="lead">
                     by <a>Administrator</a>
