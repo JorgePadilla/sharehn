@@ -119,8 +119,13 @@
                 <!--p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p-->
                <p><%= simple_format(@post.content) %></p>
                
-              
-            
+                <h4>Enlaces para descarga</h4>
+               <%@links.each do |l|%>
+                  <%= link_to l.link, l.link.to_s %><br>
+               
+               <%end%>
+      		   <br>
+      		   <br>
              
                 <!-- Blog Comments -->
 

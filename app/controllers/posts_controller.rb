@@ -9,10 +9,8 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   # GET /posts/1.json
-  def show
-    
-   
-    
+  def show  
+     @links = Link.where(post_id: 1)
   end
 
   # GET /posts/new

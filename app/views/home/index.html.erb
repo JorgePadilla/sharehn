@@ -95,7 +95,8 @@
                 <hr>
                 	 <%=image_tag(post.url, size: "800x300" , :class => "img-responsive")%>
                 <hr>         
-                <p><%= simple_format(post.content) %></p>
+                <%= simple_format(truncate(post.content.html_safe, length:250))%>
+                
 				<%= link_to post, class:"btn btn-primary" do %>
 				    Read More
 				    <span class="glyphicon glyphicon-chevron-right">
