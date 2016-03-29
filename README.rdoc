@@ -2,9 +2,4 @@
 
 ShareHN is a small website made on Ruby on Rails. 
 
-Posts
-+name: string
-+title: string
-+content: text
-+url: string
-
+<img src=SHAREHN.png />
